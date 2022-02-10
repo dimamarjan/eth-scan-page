@@ -1,0 +1,69 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+.pagination-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+.pagination-btn {
+  width: 48px;
+  height: 48px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: #ffffff;
+  border: 2px solid #f1f1f1;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.pagination-btn.current {
+  background-color: #3a80ba;
+  color: #ffffff;
+}
+.pagination-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.pagination-left-icon, .pagination-right-icon {
+  height: 24px;
+  width: 12px;
+  stroke: inherit;
+}
+.pagination-link-left, .pagination-link-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  background-color: transparent;
+  border: 0;
+  stroke: #f1f1f1;
+}
+.pagination-link-left:hover, .pagination-link-right:hover {
+  stroke: #3a80ba;
+}
+.pagination-link-left {
+  left: -48px;
+}
+.pagination-link-right {
+  right: -48px;
+}
+
+.active-btn {
+  background-color: #3a80ba;
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.active-lnk {
+  stroke: #3a80ba;
+}/*# sourceMappingURL=Pagination.css.map */

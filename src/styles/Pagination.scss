@@ -1,0 +1,91 @@
+@import "./variables";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+
+  &-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &-btn {
+    width: 48px;
+    height: 48px;
+
+    font-family: $mainFontStyle;
+    font-size: 16px;
+    line-height: 1.25;
+
+    background-color: $titleTextColor;
+
+    border: 2px solid $borderColor;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    &.current {
+      background-color: $mainBackgroundColor;
+      color: $titleTextColor;
+    }
+  }
+
+  &-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &-left-icon,
+  &-right-icon {
+    height: 24px;
+    width: 12px;
+    // stroke: $borderColor;
+    stroke: inherit;
+  }
+
+  &-link-left,
+  &-link-right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+
+    background-color: transparent;
+    border: 0;
+
+    stroke: $borderColor;
+
+    &:hover {
+      stroke: $mainBackgroundColor;
+    }
+  }
+
+  &-link-left {
+    left: -48px;
+  }
+
+  &-link-right {
+    right: -48px;
+  }
+}
+
+.active-btn {
+  background-color: $mainBackgroundColor;
+  border-color: transparent;
+  color: $titleTextColor;
+}
+
+.active-lnk {
+  stroke: $mainBackgroundColor;
+}
