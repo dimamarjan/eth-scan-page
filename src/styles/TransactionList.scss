@@ -1,75 +1,126 @@
-@import "./variables";
+@import './variables';
 
 .transactions {
-  margin-top: 16px;
-  height: 648px;
+	margin-top: 16px;
+	height: 450px;
 
-  &-table {
-    width: 1180px;
-    
+	@media screen and (min-width: 720px) {
+		min-height: 648px;
+	}
 
-    &-headers {
-      height: 48px;
-      background-color: $mainBackgroundColor;
+	&-table {
+		width: 340px;
 
-      color: $titleTextColor;
-      font-family: $mainFontStyle;
-      line-height: 1.25;
-    }
-  }
+		@media screen and (min-width: 720px) {
+			width: 700px;
+		}
 
-  th {
-    height: 48px;
+		@media screen and (min-width: 1024px) {
+			width: 900px;
+		}
 
-    font-family: $mainFontStyle;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    color: $titleTextColor;
-    text-align: start;
+		@media screen and (min-width: 1180px) {
+			width: 1180px;
+		}
 
-    padding: 4px 12px;
+		&-headers {
+			background-color: $mainBackgroundColor;
 
-    &:first-child {
-      border-radius: 10px 0 0 0;
-    }
-    &:last-child {
-      border-radius: 0 10px 0 0;
-    }
-  }
+			color: $titleTextColor;
+			font-family: $mainFontStyle;
+			line-height: 1.25;
 
-  tr:last-child {
-    td {
-      &:first-child {
-        border-radius: 0 0 0 10px;
-      }
-      &:last-child {
-        border-radius: 0 0 10px 0;
-      }
-    }
-  }
+			@media screen and (min-width: 720px) {
+				height: 48px;
+			}
+		}
 
-  td {
-    height: 32px;
-    padding: 4px 12px;
+		&-sender,
+		&-recipients,
+		&-value {
+			display: none;
+			@media screen and (min-width: 1180px) {
+				display: table-cell;
+			}
+		}
 
-    text-align: start;
-    font-family: $mainFontStyle;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.21;
-  }
+		&-min {
+			@media screen and (min-width: 1180px) {
+				display: none;
+			}
+		}
+		&-normal {
+			@media screen and (max-width: 1180px) {
+				display: none;
+			}
+		}
+	}
 
-  &-data {
-    &:nth-child(even) {
-      background-color: $rowBackgroundColor;
-    }
-    &:nth-child(odd) {
-      background-color: $borderColor;
-    }
-  }
+	th {
+		font-family: $mainFontStyle;
+		font-weight: 400;
+		font-size: 9px; //16px
+		line-height: 1.25;
+		color: $titleTextColor;
+		text-align: center;
 
-  &-link {
-    color: $mainBackgroundColor;
-  }
+		padding: 4px 12px;
+
+		&:first-child {
+			border-radius: 10px 0 0 0;
+		}
+		&:last-child {
+			border-radius: 0 10px 0 0;
+		}
+
+		@media screen and (min-width: 720px) {
+			font-size: 14px;
+			text-align: start;
+		}
+
+		@media screen and (min-width: 1024px) {
+			font-size: 16px;
+		}
+	}
+
+	tr:last-child {
+		td {
+			&:first-child {
+				border-radius: 0 0 0 10px;
+			}
+			&:last-child {
+				border-radius: 0 0 10px 0;
+			}
+		}
+	}
+
+	td {
+		padding: 2px 10px;
+
+		text-align: center;
+		font-family: $mainFontStyle;
+		font-weight: 400;
+		font-size: 9px;
+		line-height: 1.21;
+
+		@media screen and (min-width: 720px) {
+			font-size: 14px;
+			text-align: start;
+			padding: 4px 12px;
+			height: 32px;
+		}
+	}
+
+	&-data {
+		&:nth-child(even) {
+			background-color: $rowBackgroundColor;
+		}
+		&:nth-child(odd) {
+			background-color: $borderColor;
+		}
+	}
+
+	&-link {
+		color: $mainBackgroundColor;
+	}
 }

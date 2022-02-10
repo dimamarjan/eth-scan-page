@@ -1,91 +1,94 @@
-@import "./variables";
+@import './variables';
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 35px;
+	display: flex;
+	justify-content: center;
+	margin-top: 35px;
 
-  &-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+	@media screen and (min-width: 720px) {
+		margin-top: 35px;
+	}
 
-  &-item {
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-  }
+	&-list {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
 
-  &-btn {
-    width: 48px;
-    height: 48px;
+	&-item {
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
 
-    font-family: $mainFontStyle;
-    font-size: 16px;
-    line-height: 1.25;
+	&-btn {
+		width: 48px;
+		height: 48px;
 
-    background-color: $titleTextColor;
+		font-family: $mainFontStyle;
+		font-size: 16px;
+		line-height: 1.25;
 
-    border: 2px solid $borderColor;
-    box-sizing: border-box;
-    border-radius: 8px;
+		background-color: $titleTextColor;
 
-    &.current {
-      background-color: $mainBackgroundColor;
-      color: $titleTextColor;
-    }
-  }
+		border: 2px solid $borderColor;
+		box-sizing: border-box;
+		border-radius: 8px;
 
-  &-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
+		&.current {
+			background-color: $mainBackgroundColor;
+			color: $titleTextColor;
+		}
+	}
 
-  &-left-icon,
-  &-right-icon {
-    height: 24px;
-    width: 12px;
-    // stroke: $borderColor;
-    stroke: inherit;
-  }
+	&-section {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
 
-  &-link-left,
-  &-link-right {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    width: 48px;
+	&-left-icon,
+	&-right-icon {
+		height: 24px;
+		width: 12px;
+		stroke: inherit;
+	}
 
-    background-color: transparent;
-    border: 0;
+	&-link-left,
+	&-link-right {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 48px;
+		width: 48px;
 
-    stroke: $borderColor;
+		background-color: transparent;
+		border: 0;
 
-    &:hover {
-      stroke: $mainBackgroundColor;
-    }
-  }
+		stroke: $borderColor;
 
-  &-link-left {
-    left: -48px;
-  }
+		&:hover {
+			stroke: $mainBackgroundColor;
+		}
+	}
 
-  &-link-right {
-    right: -48px;
-  }
+	&-link-left {
+		left: -48px;
+	}
+
+	&-link-right {
+		right: -48px;
+	}
 }
 
 .active-btn {
-  background-color: $mainBackgroundColor;
-  border-color: transparent;
-  color: $titleTextColor;
+	background-color: $mainBackgroundColor;
+	border-color: transparent;
+	color: $titleTextColor;
 }
 
 .active-lnk {
-  stroke: $mainBackgroundColor;
+	stroke: $mainBackgroundColor;
 }

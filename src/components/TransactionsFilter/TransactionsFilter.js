@@ -58,33 +58,35 @@ export function TransactionsFilter() {
 	};
 
 	return (
-		<div className="filter-section">
-			<form className="filter-form" onSubmit={onSubmitHandler}>
-				<div className="filter-input-container">
-					<input
-						className="filter-input"
-						placeholder={placeholderValue}
-						onInput={onInputHandler}
-						value={inputField}
-					/>
-					<select
-						className="filter-select"
-						onChange={onChangeFilterHandler}
+		<div className="filter">
+			<div className="filter-section">
+				<form className="filter-form" onSubmit={onSubmitHandler}>
+					<div className="filter-input-container">
+						<input
+							className="filter-input"
+							placeholder={placeholderValue}
+							onInput={onInputHandler}
+							value={inputField}
+						/>
+						<select
+							className="filter-select"
+							onChange={onChangeFilterHandler}
+						>
+							<option>Address</option>
+							<option>ID transaction</option>
+							<option>Block Number</option>
+						</select>
+						<SelectIcon className="filter-select-icon" />
+					</div>
+					<button
+						className="filter-submit-btn"
+						type="button"
+						onClick={onSubmitHandler}
 					>
-						<option>Address</option>
-						<option>ID transaction</option>
-						<option>Block Number</option>
-					</select>
-					<SelectIcon className="filter-select-icon" />
-				</div>
-				<button
-					className="filter-submit-btn"
-					type="button"
-					onClick={onSubmitHandler}
-				>
-					<FindIcon className="filter-submit-btn-icon" />
-				</button>
-			</form>
+						<FindIcon className="filter-submit-btn-icon" />
+					</button>
+				</form>
+			</div>
 		</div>
 	);
 }

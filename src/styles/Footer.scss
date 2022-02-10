@@ -1,40 +1,90 @@
-@import "./variables";
+@import './variables';
 
 .footer {
-  margin-top: 60px;
-  height: 57px;
-  min-width: 1180px;
-  background-color: $footerBackgroundColor;
+	margin-top: 200px;
+	height: 57px;
+	min-width: 340px;
+	background-color: $footerBackgroundColor;
 
-  &-section {
-    display: flex;
-    align-items: center;
-    width: 1180px;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	@media screen and (min-width: 720px) {
+		min-width: 700px;
+	}
 
-  &-list {
-    display: flex;
-    width: 1180px;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+	@media screen and (min-width: 1024px) {
+		min-width: 900px;
+	}
 
-  &-logo {
-    font-family: $mainFontStyle;
-    font-size: 24px;
-    line-height: 1.2;
-    color: $titleTextColor;
-  }
+	@media screen and (min-width: 1180px) {
+		min-width: 1180px;
+	}
 
-  &-policy {
-    font-family: $mainFontStyle;
-    font-size: 16px;
-    line-height: 1.43;
-    color: $titleTextColor;
-  }
+	@media screen and (min-height: 1368px) {
+		margin-top: calc(100vh - 60px);
+	}
+
+	&-section {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		width: 340px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and (min-width: 720px) {
+			min-width: 700px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			min-width: 900px;
+		}
+
+		@media screen and (min-width: 1180px) {
+			min-width: 1180px;
+		}
+	}
+
+	&-list {
+		display: flex;
+		width: 340px;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@media screen and (min-width: 720px) {
+			width: 700px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			width: 900px;
+		}
+
+		@media screen and (min-width: 1180px) {
+			width: 1180px;
+		}
+	}
+
+	&-logo {
+		font-family: $mainFontStyle;
+		font-size: 18px;
+		line-height: 1.2;
+		color: $titleTextColor;
+
+		@media screen and (min-width: 720px) {
+			font-size: 24px;
+		}
+	}
+
+	&-policy {
+		font-family: $mainFontStyle;
+		font-size: 11px;
+		line-height: 1.43;
+		color: $titleTextColor;
+		text-align: center;
+
+		@media screen and (min-width: 720px) {
+			font-size: 16px;
+		}
+	}
 }

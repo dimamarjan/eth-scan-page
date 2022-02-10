@@ -1,96 +1,129 @@
-@import "./variables";
+@import './variables';
 
 .filter {
-  &-section {
-    margin-top: 60px;
-    width: 441px;
-  }
+	width: 340px;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: auto;
 
-  &-form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+	@media screen and (min-width: 720px) {
+		width: 441px;
+	}
 
-  &-input-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+	&-form {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-    height: 48px;
+	&-input-container {
+		position: relative;
+		display: flex;
+		align-items: center;
 
-    border: 1px solid $borderColor;
-    border-radius: 10px;
-    &::after {
-      content: "";
-      left: 237px;
-      position: absolute;
-      display: block;
-      width: 1px;
-      height: 32px;
+		height: 30px;
 
-      background-color: $borderColor;
-    }
-  }
+		border: 1px solid $borderColor;
+		border-radius: 10px;
+		&::after {
+			content: '';
+			left: 180px;
+			position: absolute;
+			display: block;
+			width: 1px;
+			height: 24px;
 
-  &-input {
-    // outline: auto; //TODO: del
-    width: 205px;
-    height: 100%;
-    background-color: transparent;
+			background-color: $borderColor;
+		}
+		@media screen and (min-width: 720px) {
+			height: 48px;
+			&::after {
+				left: 237px;
+				height: 32px;
+			}
+		}
+	}
 
-    font-family: $mainFontStyle;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.21;
-    border: none;
-    padding-left: 16px;
-    padding-right: 16px;
+	&-input {
+		width: 147px;
+		height: 100%;
+		background-color: transparent;
 
-    outline-color: $mainBackgroundColor;
-  }
+		font-family: $mainFontStyle;
+		font-style: italic;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 1.21;
+		border: none;
+		padding-left: 16px;
+		padding-right: 16px;
+		margin-right: 3px;
 
-  &-select {
-    // outline: none; //TODO: del
+		outline-color: $mainBackgroundColor;
 
-    font-family: $mainFontStyle;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    padding-left: 12px;
-    width: 143px;
-    height: 100%;
+		@media screen and (min-width: 720px) {
+			width: 205px;
+		}
+	}
 
-    border: none;
-    appearance: none;
-    background-color: transparent;
+	&-select {
+		font-family: $mainFontStyle;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 17px;
+		padding-left: 12px;
+		width: 100px;
+		height: 100%;
 
-    outline-color: $mainBackgroundColor;
+		border: none;
+		appearance: none;
+		background-color: transparent;
 
-    &-icon {
-      position: absolute;
-      left: 347px;
-      width: 16px;
-      height: 10px;
-      fill: $mainBackgroundColor;
-    }
-  }
+		outline-color: $mainBackgroundColor;
 
-  &-submit-btn {
-    background-color: $mainBackgroundColor;
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-    border-color: transparent;
+		&-icon {
+			position: absolute;
+			left: 260px;
+			width: 12px;
+			height: 6px;
+			fill: $mainBackgroundColor;
+		}
 
-    outline-color: $mainBackgroundColor;
+		@media screen and (min-width: 720px) {
+			width: 143px;
 
-    &-icon {
-      width: 16px;
-      height: 16px;
-      fill: $titleTextColor;
-    }
-  }
+			&-icon {
+				left: 347px;
+				width: 16px;
+				height: 10px;
+				fill: $mainBackgroundColor;
+			}
+		}
+	}
+
+	&-submit-btn {
+		background-color: $mainBackgroundColor;
+		width: 30px;
+		height: 30px;
+		border-radius: 8px;
+		border-color: transparent;
+
+		outline-color: $mainBackgroundColor;
+
+		&-icon {
+			width: 12px;
+			height: 12px;
+			fill: $titleTextColor;
+		}
+		@media screen and (min-width: 720px) {
+			width: 48px;
+			height: 48px;
+			&-icon {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
 }

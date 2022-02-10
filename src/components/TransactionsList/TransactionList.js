@@ -66,35 +66,51 @@ export function TransactionList() {
 	return (
 		<div className="transactions">
 			<table className="transactions-table">
-				<thead>
+				<thead className="transactions-table-head">
 					<tr className="transactions-table-headers">
 						<th>
-							Block
-							<br />
-							number
+							<span className="transactions-table-min">BLK</span>
+							<span className="transactions-table-normal">
+								Block
+								<br />
+								number
+							</span>
 						</th>
-						<th>Transaction ID</th>
 						<th>
+							<span className="transactions-table-min">TXN</span>
+							<span className="transactions-table-normal">
+								Transaction ID
+							</span>
+						</th>
+						<th className="transactions-table-sender">
 							Sender
 							<br />
 							address
 						</th>
-						<th>
+						<th className="transactions-table-recipients">
 							Recipient's
 							<br />
 							address
 						</th>
-						<th>
-							Block
-							<br />
-							confirmations
+						<th className="transactions-table-confirmations">
+							<span className="transactions-table-min">
+								BLK conf.
+							</span>
+							<span className="transactions-table-normal">
+								Block
+								<br />
+								confirmations
+							</span>
 						</th>
 						<th>Date</th>
-						<th>Value</th>
-						<th>
-							Transaction
-							<br />
-							Fee
+						<th className="transactions-table-value">Value</th>
+						<th className="transactions-table-Fee">
+							<span className="transactions-table-min">Fee</span>
+							<span className="transactions-table-normal">
+								Transaction
+								<br />
+								Fee
+							</span>
 						</th>
 					</tr>
 				</thead>
@@ -114,17 +130,19 @@ export function TransactionList() {
 											{stringValidation(txn.hash, 12)}
 										</a>
 									</td>
-									<td className="transactions-txn-sender">
+									<td className="transactions-table-sender">
 										{stringValidation(txn.from, 13)}
 									</td>
-									<td className="transactions-txn-recipient">
+									<td className="transactions-table-recipients">
 										{stringValidation(txn.to, 15)}
 									</td>
-									<td className="transactions-txn-confirmation">
+									<td className="transactions-table-confirmations">
 										{currentBlock - txn.blockNumber}
 									</td>
 									<td>{txn.date}</td>
-									<td>{bigIntFormat(txn.value)}</td>
+									<td className="transactions-table-value">
+										{bigIntFormat(txn.value)}
+									</td>
 									<td>====</td>
 								</tr>
 							);
