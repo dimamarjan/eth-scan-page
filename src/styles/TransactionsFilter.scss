@@ -1,14 +1,26 @@
 @import './variables';
 
 .filter {
-	width: 340px;
+	width: 100%;
 	margin-top: 60px;
 	margin-bottom: 20px;
 	margin-left: 0;
 	margin-right: auto;
-
 	@media screen and (min-width: 720px) {
-		width: 441px;
+		width: 700px;
+	}
+	@media screen and (min-width: 1024px) {
+		width: 900px;
+	}
+
+	@media screen and (min-width: 1180px) {
+		width: 1180px;
+	}
+
+	&-section {
+		@media screen and (min-width: 720px) {
+			width: 441px;
+		}
 	}
 
 	&-form {
