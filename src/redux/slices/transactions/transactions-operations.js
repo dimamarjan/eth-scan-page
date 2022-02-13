@@ -3,7 +3,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const getTransactions = createAsyncThunk("transactions/get", async () => {
   const { data } = await axios.get(
-    // 'http://localhost:3030/api/transactions'
     "https://eth-node-server.herokuapp.com/api/transactions"
   );
   return data;
@@ -13,7 +12,6 @@ const getTransactionsByFilter = createAsyncThunk(
   "transactionsByHash/get",
   async (credentials) => {
     const { data } = await axios.post(
-      // 'http://localhost:3030/api/transactions',
       "https://eth-node-server.herokuapp.com/api/transactions",
       credentials
     );

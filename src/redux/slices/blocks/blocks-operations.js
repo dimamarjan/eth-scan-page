@@ -3,7 +3,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const getBlock = createAsyncThunk("block/get", async () => {
   const { data } = await axios.get(
-    // 'http://localhost:3030/api/blocks'
     "https://eth-node-server.herokuapp.com/api/blocks"
   );
   return data;
