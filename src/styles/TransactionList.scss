@@ -1,9 +1,9 @@
 @import './variables';
 
 .transactions {
+	min-height: 640px;
 	@media screen and (min-width: 1180px) {
 		margin-top: 16px;
-		height: 640px;
 	}
 
 	&-table {
@@ -18,8 +18,20 @@
 
 		&-loading {
 			margin-top: 60px;
-			width: 1180px;
+			width: 340px;
 			text-align: center;
+
+			@media screen and (min-width: 720px) {
+				width: 720px;
+			}
+
+			@media screen and (min-width: 1024px) {
+				width: 1000px;
+			}
+
+			@media screen and (min-width: 1180px) {
+				width: 1180px;
+			}
 
 			&-txt {
 				color: $mainBackgroundColor;

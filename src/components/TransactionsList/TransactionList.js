@@ -18,7 +18,7 @@ export function TransactionList() {
   const [pageList, setPageList] = useState([]);
   const [isShowTxnList, setIsShowTxnList] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [isServerErr, setisServerErr] = useState(false);
+  const [isServerErr, setIsServerErr] = useState(false);
 
   const { page } = useParams();
 
@@ -83,9 +83,9 @@ export function TransactionList() {
 
   useEffect(() => {
     if (!isLoadedTransactions) {
-      setisServerErr(true);
+      setIsServerErr(true);
     } else {
-      setisServerErr(false);
+      setIsServerErr(false);
     }
   }, [isLoadedTransactions]);
 
